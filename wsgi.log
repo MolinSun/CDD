@@ -1,0 +1,762 @@
+ * Serving Flask app 'movie' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Running on http://ec2-54-194-67-198.eu-west-1.compute.amazonaws.com:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 766-184-206
+80.233.38.217 - - [28/Aug/2021 22:19:19] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:19:19] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:19:19] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:19:22] "GET /movie/static/data.js HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:25:39] "GET /movie/static/data.js HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:25:41] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:25:41] "GET /cdn/place2.jpg HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:25:41] "GET /cdn/place1.jpg HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:25:45] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:29:10] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:29:18] "GET /cdn/default.jpg HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:31:45] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:32:28] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:32:28] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:32:28] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:32:29] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:33:28] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:36:57] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:43:33] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:45:25] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:45:25] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:45:25] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:45:28] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:45:34] "[33mGET /cdn/paths/place0/D424_D437(D405%20D406%20D414).jpeg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:45:41] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:45:41] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:45:41] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:45:43] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:46:01] "[33mGET /cdn/paths/place0/D401(D403%20D404)_Entrance.jpeg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:49:33] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:49:33] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:49:33] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:49:35] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:50:49] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:50:50] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:50:50] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:50:50] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:50:51] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:50:57] "[33mGET /cdn/paths/place2/Entrance_Coffee%20Dock.jpeg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 22:54:13] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:54:19] "GET /cdn/paths/place2/Coffee%20Dock_Reception.jpg HTTP/1.1" 200 -
+80.233.38.217 - - [28/Aug/2021 22:54:31] "[33mGET /cdn/paths/place1/Faculty%20of%20Lifelong%20Learning_C180(C178%20C179).jpeg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:54:34] "[33mGET /cdn/paths/place1/Faculty%20of%20Lifelong%20Learning_C180(C178%20C179).jpeg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:54:38] "[33mGET /cdn/paths/place1/C180(C178%20C179)_C139(C138%20C138,C137).jpeg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:54:41] "[33mGET /cdn/paths/place1/Faculty%20of%20Lifelong%20Learning_C180(C178%20C179).jpeg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:54:47] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:54:47] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:54:47] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:54:49] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:54:55] "GET /cdn/paths/place2/Entrance_Coffee%20Dock.jpg HTTP/1.1" 200 -
+80.233.38.217 - - [28/Aug/2021 22:54:59] "GET /cdn/paths/place2/Coffee%20Dock_Craft%20Kitch.jpg HTTP/1.1" 200 -
+80.233.38.217 - - [28/Aug/2021 22:55:23] "[36mGET /cdn/paths/place2/Entrance_Coffee%20Dock.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:55:26] "[33mGET /cdn/place0.jpg HTTP/1.1[0m" 404 -
+80.233.38.217 - - [28/Aug/2021 22:55:26] "[36mGET /cdn/place2.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:55:26] "[36mGET /cdn/place1.jpg HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:56:10] "[36mGET /movie/static/data.js HTTP/1.1[0m" 304 -
+80.233.38.217 - - [28/Aug/2021 22:56:17] "GET /cdn/paths/place2/Coffee%20Dock_Reception.jpg HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "GET /home HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:22] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:57:29] "GET /blogs/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:29] "GET /blogs/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:31] "GET /blogs/update/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:34] "[32mPOST /blogs/update/1 HTTP/1.1[0m" 302 -
+80.233.46.28 - - [28/Aug/2021 22:57:34] "GET /blogs/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:38] "GET /blogs HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:38] "GET /blogs HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:45] "GET /blogs/create HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:45] "GET /blogs/create HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:57:55] "[32mPOST /blogs/create HTTP/1.1[0m" 302 -
+80.233.46.28 - - [28/Aug/2021 22:57:58] "[32mPOST /blogs/create HTTP/1.1[0m" 302 -
+80.233.46.28 - - [28/Aug/2021 22:58:01] "[32mPOST /blogs/create HTTP/1.1[0m" 302 -
+80.233.46.28 - - [28/Aug/2021 22:58:01] "GET /blogs HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "GET /home HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 22:58:07] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:01:03] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:01:03] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:01:03] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:09:37] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:09:37] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:30] "GET /home/2 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:30] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:30] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:30] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:30] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:31] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:31] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 23:12:31] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 23:12:31] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:31] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "GET /home/3 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[33mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:39] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "GET /home/2 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "GET /home/2 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+80.233.46.28 - - [28/Aug/2021 23:12:46] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:48] "GET /home/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:48] "GET /home/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:49] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "GET /home/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:52] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "GET /home/1 HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "GET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+80.233.46.28 - - [28/Aug/2021 23:14:54] "GET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js.map HTTP/1.1" 200 -
+74.120.14.59 - - [28/Aug/2021 23:56:57] code 400, message Bad request version ('À\x14À')
+74.120.14.59 - - [28/Aug/2021 23:56:57] "[35m[1m {  w6ÕG6@éb§ö¬6J\k¸¤;lõ `  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+74.120.14.59 - - [28/Aug/2021 23:56:59] "[33mGET / HTTP/1.1[0m" 404 -
+74.120.14.59 - - [28/Aug/2021 23:56:59] "[33mGET / HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:09:49] "GET /blogs/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:09:49] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:09:50] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:09:52] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:53] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "GET /home/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:56] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:09:59] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+ * Detected change in '/home/ubuntu/PersonalProject/BackEnd/wsgi.py', reloading
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### default.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place0/D424_D437(D405 D406 D414).jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place0/D401(D403 D404)_Entrance.jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place2/Entrance_Coffee Dock.jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place2/Coffee Dock_Reception.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place1/Faculty of Lifelong Learning_C180(C178 C179).jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place1/Faculty of Lifelong Learning_C180(C178 C179).jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place1/C180(C178 C179)_C139(C138 C138,C137).jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place1/Faculty of Lifelong Learning_C180(C178 C179).jpeg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place2/Entrance_Coffee Dock.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place2/Coffee Dock_Craft Kitch.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place2/Entrance_Coffee Dock.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place0.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place2.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### place1.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### static/data.js  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+#################### paths/place2/Coffee Dock_Reception.jpg  in custom_static /home/ubuntu/PersonalProject/BackEnd/movie
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 4 ********************
+totalpage= 2
+1 <Blog 1> in query_building @@@@@@@@@@@@@@@@@@@@
+1 <Blog 1> in query_building @@@@@@@@@@@@@@@@@@@@
+1 <Blog 1> in query_building @@@@@@@@@@@@@@@@@@@@
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+1 <Blog 1> in query_building @@@@@@@@@@@@@@@@@@@@
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 3
+ * Restarting with stat
+/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 766-184-206
+37.228.237.156 - - [29/Aug/2021 00:15:56] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[33mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:15:56] "[33mGET /static/images/app_data/7.jpg HTTP/1.1[0m" 404 -
+ * Detected change in '/home/ubuntu/PersonalProject/BackEnd/wsgi.py', reloading
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 0
+ * Restarting with stat
+/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 766-184-206
+37.228.237.156 - - [29/Aug/2021 00:17:41] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:17:41] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:41] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:41] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:42] "[33mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:43] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[33mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:44] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[33mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:46] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[33mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:17:49] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+ * Detected change in '/home/ubuntu/PersonalProject/BackEnd/wsgi.py', reloading
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 1
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 1
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 1
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 1
+ * Restarting with stat
+/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 766-184-206
+37.228.237.156 - - [29/Aug/2021 00:18:37] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:18:37] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+ * Detected change in '/home/ubuntu/PersonalProject/BackEnd/wsgi.py', reloading
+home home home home home home home home home home 
+userid not in session
+in home None blogs= 7 ********************
+totalpage= 2
+ * Restarting with stat
+/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:873: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 766-184-206
+37.228.237.156 - - [29/Aug/2021 00:19:29] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:29] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "GET /home/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[33mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[33mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:19:33] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:36] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:19:36] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:36] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:36] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:36] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:37] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:37] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:19:37] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:04] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:06] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "GET /home/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "GET /static/images/app_data/3.jpg HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:09] "GET /static/images/app_data/4.jpg HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:12] "GET /home/3 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "[33mGET /static/images/app_data/6.jpg HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:13] "GET /static/images/app_data/5.jpg HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:15] "GET /home/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:15] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:16] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:16] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:16] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:16] "[36mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:16] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:16] "[36mGET /static/images/app_data/3.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:19] "GET /blogs/3 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:21] "[35m[1mDELETE /blogs/3 HTTP/1.1[0m" 204 -
+37.228.237.156 - - [29/Aug/2021 00:43:21] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 00:43:23] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+209.17.96.138 - - [29/Aug/2021 01:48:03] "[33mGET / HTTP/1.0[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 03:39:45] "[35m[1mGET /profile HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/PersonalProject/BackEnd/wsgi.py", line 228, in query_profile
+    id = session["userid"]
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/sessions.py", line 79, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'userid'
+37.228.237.156 - - [29/Aug/2021 03:39:45] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:39:45] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:39:45] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:39:45] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:39:45] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "GET /home?pagenum=1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:06] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:42:17] "GET /profile HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:42:30] "GET /profiles/update/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:42:54] "[32mPOST /profiles/update/1 HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 03:42:54] "GET /profile HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "GET /profiles/update/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:01] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "GET /home/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/images/app_data/5.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/images/app_data/4.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:43:06] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:45:46] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1772, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/PersonalProject/BackEnd/wsgi.py", line 340, in register
+    db.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 3298, in flush
+    self._flush(objects)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 3438, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 3398, in _flush
+    flush_context.execute()
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 633, in execute
+    uow,
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 247, in save_obj
+    insert,
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1222, in _emit_insert_statements
+    execution_options=execution_options,
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1583, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 324, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1462, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1996, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1772, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/ubuntu/myproject/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: INSERT INTO user (username, password, nickname, school_class, school_grade) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('momokosun329@gmail.com', '123321', None, None, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+37.228.237.156 - - [29/Aug/2021 03:45:46] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:45:46] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:45:46] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:45:47] "GET /register?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:45:47] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:13] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:51:44] "GET /blogs/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:51:46] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:52:10] "GET /assignwork HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:52:10] "GET /static/webuploader/webuploader.min.js HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:52:10] "GET /static/webuploader/webuploader.css HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 03:52:10] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:52:10] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 03:52:10] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "GET /home/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:31] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:03:38] "[33mGET /blog HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 04:03:38] "[33mGET /blog HTTP/1.1[0m" 404 -
+37.228.237.156 - - [29/Aug/2021 04:03:44] "GET /blogs/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:03:48] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:12] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:14] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:05:16] "GET /blogs/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:05:18] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:05:41] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:05:41] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:42] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:42] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:42] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:42] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:42] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:05:42] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:36:59] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:03] "GET /blogs/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:05] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:08] "GET /blogs/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:10] "GET /blogs/update/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:19] "[32mPOST /blogs/update/1 HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 04:37:19] "GET /blogs/1 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:23] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:25] "GET /blogs/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:27] "GET /blogs/update/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:30] "[32mPOST /blogs/update/2 HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 04:37:30] "GET /blogs/2 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:32] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:33] "GET /blogs/4 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:37] "GET /blogs/update/4 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:43] "[32mPOST /blogs/update/4 HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 04:37:43] "GET /blogs/4 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:48] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:50] "GET /blogs/5 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:37:51] "GET /blogs/update/5 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:20] "[32mPOST /blogs/update/5 HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 04:38:20] "GET /blogs/5 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:23] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:24] "GET /blogs/6 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:26] "[35m[1mDELETE /blogs/6 HTTP/1.1[0m" 204 -
+37.228.237.156 - - [29/Aug/2021 04:38:26] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:28] "GET /blogs/7 HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:30] "[35m[1mDELETE /blogs/7 HTTP/1.1[0m" 204 -
+37.228.237.156 - - [29/Aug/2021 04:38:30] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:38:32] "GET /blogs/create HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:39:14] "[32mPOST /blogs/create HTTP/1.1[0m" 302 -
+37.228.237.156 - - [29/Aug/2021 04:39:14] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:39:42] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 04:54:41] "GET /blogs HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 05:02:29] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 05:02:29] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:29] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:29] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:29] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:30] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:30] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:30] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:02:44] "POST /login HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 05:38:00] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "GET /home HTTP/1.1" 200 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/bootstrap-4.5.2-dist/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/vue.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/d3/d3.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/jquery-3.5.1.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/bootstrap-4.5.2-dist/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/images/app_data/1.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:22] "[36mGET /static/images/app_data/2.jpg HTTP/1.1[0m" 304 -
+37.228.237.156 - - [29/Aug/2021 06:02:23] "GET /profile HTTP/1.1" 200 -
